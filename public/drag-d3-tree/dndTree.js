@@ -6,43 +6,136 @@ treeJSON = d3.json("nodes.json", function (error, treeData) {
 */
 
 var treeData = {
-    "name": "Root1",
-    "nodeNo": 0,
-    "value": 1,
-    "status": "In",
-    "type": "MainNode",
-    "mainRoot": "Root1",
-    "nodeBefore": "null",
-    "linkWidth": 0,
-    "children": [{
-        "name": "Node1",
-        "nodeNo": 1,
-        "value": 5,
-        "status": "In",
-        "type": "Small",
-        "mainRoot": "Root1",
-        "nodeBefore": "Node1",
-        "linkWidth": 10
-    }, {
-        "name": "Node2",
-        "nodeNo": 2,
-        "value": 10,
-        "status": "In",
-        "type": "Medium",
-        "mainRoot": "Root1",
-        "nodeBefore": "Node2",
-        "linkWidth": 15
-    }, {
-        "name": "Node3",
-        "nodeNo": 3,
-        "value": 5,
-        "status": "Out",
-        "type": "Large",
-        "mainRoot": "Root1",
-        "nodeBefore": "Node3",
-        "linkWidth": 50
-    }
-    ]
+    "name": "思辨-储备",
+    "number": "12",
+    "type": "1",
+    "children":
+        [
+            {
+                "name": "产品节奏",
+                "number": "3",
+                "value": 100,
+                "type": "1",
+                "children":
+                    [
+                        {
+                            "name": "2019 上半年",
+                            "nodeWidth": "80",
+                            "number": "381",
+                            "type": "1",
+                            "children":
+                                [
+                                    {
+                                        "name": "Web 前端",
+                                        "number": "180",
+                                        "type": "1"
+                                    },
+                                    {
+                                        "name": "后端 (NodeJS)",
+                                        "number": "145",
+                                        "type": "1"
+                                    }
+                                ]
+                        },
+                        {
+                            "name": "2019 下半年",
+                            "nodeWidth": "80",
+                            "number": "121",
+                            "type": "1",
+                            "children": [{
+                                "name": "移动端开发人员",
+                                "nodeWidth": "105",
+                                "number": "1",
+                                "type": "1",
+                            },
+                                {
+                                    "name": "后端 (NodeJS)",
+                                    "number": "1",
+                                    "type": "1",
+                                },
+                                {
+                                    "name": "文档解析",
+                                    "number": "1",
+                                    "nodeWidth": "70",
+                                    "type": "1",
+                                },
+                                {
+                                    "name": "复杂方案设计过程中的智能支持",
+                                    "number": "1",
+                                    "nodeWidth": "190",
+                                    "type": "1",
+                                }]
+                        }
+                    ]
+            },
+            {
+                "name": "人员标准",
+                "number": "1",
+                "type": "1",
+                "value": 100,
+                "children":
+                    [
+                        {
+                            "name": "技术有特长",
+                            "number": "183",
+                            "type": "1",
+                            "value": 100
+                        },
+                        {
+                            "name": "能够在南京工作或持续出差",
+                            "nodeWidth": "190",
+                            "number": "8",
+                            "type": "1"
+                        }
+                    ]
+            },
+            {
+                "name": "技术需求",
+                "number": "1",
+                "type": "1",
+                "children":
+                    [
+                        {
+                            "name": "图例",
+                            "number": "183",
+                            "type": "1",
+                            "children":
+                                [
+                                    {
+                                        "name": "需要的",
+                                        "number": "183",
+                                        "type": "1"
+                                    },
+                                    {
+                                        "name": "关注中, 可能需要的",
+                                        "nodeWidth": "120",
+                                        "number": "8",
+                                        "type": "1"
+                                    }
+                                ]
+                        },
+                        {
+                            "name": "语言",
+                            "number": "183",
+                            "type": "1",
+                            "children":
+                                [
+                                    {
+                                        "name": "JavaScript/TypeScript",
+                                        "number": "183",
+                                        "nodeWidth": "150",
+                                        "type": "1"
+                                    },
+                                    {
+                                        "name": "Python",
+                                        "number": "8",
+                                        "type": "1"
+                                    }
+                                ]
+                        }
+                    ]
+            }
+        ]
 };
 // Calculate total nodes, max label length
 var totalNodes = 0;
