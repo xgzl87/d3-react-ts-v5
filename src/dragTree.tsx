@@ -65,8 +65,8 @@ class DragTree extends React.Component<any, IState> {
         //    console.log(this.getRoot());
         return (
             <div id="treeWrapper" style={{width: this.state.width + "px", height: this.state.height + "px"}}>
-                <iframe src="./drag-d3-tree/index.html"
-                        style={{width: this.state.width + "px", height: this.state.height + "px"}}/>
+                <iframe src="http://42.159.155.203:3210/drag-d3-tree/index.html"
+                        style={{width: this.state.width + "px", height: this.state.height + "px", border: "0px"}}/>
             </div>
         );
     }
